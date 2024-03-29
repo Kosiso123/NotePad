@@ -62,7 +62,27 @@
   .todo-list button:hover {
     background-color: darkred;
   }
+
+  .note-content {
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
   
+  .note-content img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .note-content video {
+    max-width: 100%; /* Ensure videos don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .note-textarea {
+    width: calc(100% - 20px); /* Adjust width to fit the content */
+    margin-bottom: 10px; 
+  }
+  
+ 
   
   
   

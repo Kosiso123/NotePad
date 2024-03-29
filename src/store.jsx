@@ -1,4 +1,4 @@
-import {create} from 'zustand';
+import { create } from 'zustand';
 
 export const useNoteStore = create((set) => ({
   note: '',
@@ -8,28 +8,30 @@ export const useNoteStore = create((set) => ({
     underline: false,
     font: 'Arial',
   },
-  // Action to add an image to the note
   addImage: (imageUrl) =>
-    set((state) => ({ note: state.note + `<img src="${imageUrl}" />` })),
-  // Action to add a video to the note
+    set((state) => ({
+      note: state.note + `<img src="${imageUrl}" alt="Image" />`,
+    })),
   addVideo: (videoUrl) =>
-    set((state) => ({ note: state.note + `<video src="${videoUrl}" />` })),
-  // Action to add a gif to the note
+    set((state) => ({
+      note: state.note + `<video src="${videoUrl}" controls></video>`,
+    })),
   addGif: (gifUrl) =>
-    set((state) => ({ note: state.note + `<img src="${gifUrl}" />` })),
-  // Action to update the note content
+    set((state) => ({
+      note: state.note + `<img src="${gifUrl}" alt="GIF" />`,
+    })),
   updateNote: (newNote) => set({ note: newNote }),
-  // Action to toggle bold formatting
   toggleBold: () =>
-    set((state) => ({ formatting: { ...state.formatting, bold: !state.formatting.bold } })),
-  // Action to toggle italic formatting
+    set((state) => ({
+      formatting: { ...state.formatting, bold: !state.formatting.bold },
+    })),
   toggleItalic: () =>
-    set((state) => ({ formatting: { ...state.formatting, italic: !state.formatting.italic } })),
-  // Action to toggle underline formatting
+    set((state) => ({
+      formatting: { ...state.formatting, italic: !state.formatting.italic },
+    })),
   toggleUnderline: () =>
     set((state) => ({
       formatting: { ...state.formatting, underline: !state.formatting.underline },
     })),
-  // Action to change the font
   changeFont: (font) => set((state) => ({ formatting: { ...state.formatting, font } })),
 }));

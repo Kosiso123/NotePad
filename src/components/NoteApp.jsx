@@ -66,8 +66,13 @@ function NoteApp() {
           textDecoration: formatting.underline ? 'underline' : 'none'
         }}
       />
+       
+
+           
       <div className="todo-list">
         <h2>NotePad-App</h2>
+        <div className="note-content" dangerouslySetInnerHTML={{ __html: note }} />
+
         <ul>
           {todos.map((todo, index) => (
             <li key={index}>
@@ -77,6 +82,7 @@ function NoteApp() {
           ))}
         </ul>
       </div>
+      
     </div>
   );
 }
