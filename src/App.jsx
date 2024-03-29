@@ -1,6 +1,6 @@
 import React from 'react';
 import NoteApp from './components/NoteApp';
-import { useNoteStore } from './store'; // Import the custom hook
+import { useNoteStore } from './store';
 
 function App() {
   return (
