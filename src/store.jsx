@@ -10,7 +10,7 @@ export const useNoteStore = create((set) => ({
   },
   addImage: (imageUrl) =>
     set((state) => ({
-      note: state.note + `<img src="${imageUrl}" alt="Image" />`,
+      note: state.note + `<img src="${imageUrl}" alt="Image" width="300px" style="display:block; padding:10px 0px" />`,
     })),
   addVideo: (videoUrl) =>
     set((state) => ({

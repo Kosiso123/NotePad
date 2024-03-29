@@ -1,3 +1,4 @@
+import parse from 'html-react-parser'
 import React, { useState } from 'react';
 import { useNoteStore } from '../store';
 import './NoteApp.css';
@@ -76,7 +77,7 @@ function NoteApp() {
         <ul>
           {todos.map((todo, index) => (
             <li key={index}>
-              {todo}
+              {parse(todo)}
               <button onClick={() => handleDelete(index)}>Delete</button>
             </li>
           ))}
