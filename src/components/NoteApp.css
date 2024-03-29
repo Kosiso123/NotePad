@@ -1,0 +1,73 @@
+.note-app {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px; /* Add gap between the text area and the buttons */
+    align-items: center;
+  }
+  
+  .note-textarea {
+    grid-column: 1 / span 2; /* Span both columns */
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 16px;
+    resize: vertical;
+    overflow-y: auto;
+  }
+  
+  .toolbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Auto-fit columns with minimum width of 120px */
+    gap: 10px; /* Add gap between buttons */
+  }
+  
+  .toolbar button {
+    padding: 10px; /* Adjust button padding */
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .toolbar button:hover {
+    background-color: #45a049;
+  }
+  
+  .toolbar select {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .toolbar select:hover {
+    background-color: #e0e0e0;
+  }
+
+  .todo-list button {
+    background-color: rgba(255, 0, 0, 0.575);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .todo-list button:hover {
+    background-color: darkred;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
